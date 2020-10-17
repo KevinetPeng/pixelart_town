@@ -6,7 +6,14 @@ function Plot(props) {
 
 
     return (
-        <House image={house1} width={300} height={300}></House>
+        <div style={{
+            display: "inline-block",
+            height: "300px",
+            width: "300px",
+            border: "2px solid black",
+        }}>
+            <House image={house1}></House>
+        </div>
     )
 }
 
