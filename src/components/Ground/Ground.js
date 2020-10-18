@@ -3,11 +3,11 @@ import "konva";
 import { Stage, Layer, Image } from "react-konva";
 import useImage from "use-image";
 
-function Gound(props) {
+function Ground(props) {
   const image = props.image;
 
   const GroundImage = () => {
-    const [imageUrl] = GroundImage(image);
+    const [imageUrl] = useImage(image);
     return <Image image={imageUrl} />;
   };
 
