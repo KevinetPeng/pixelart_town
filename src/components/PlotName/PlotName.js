@@ -5,9 +5,10 @@ import useImage from "use-image";
 
 function PlotName(props) {
   const text = props.text;
+  const posX = props.x;
+  const posY = props.y;
 
-  return <Text text={text} fontSize={15}></Text>;
-  //   return <img src={image} alt="House"></img>;
+  return <Text text={text} fontSize={15} x={posX} y={posY}></Text>;
 }
 
 export default PlotName;

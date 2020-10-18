@@ -5,14 +5,15 @@ import House from "./components/House/House";
 import { render } from "react-dom";
 import { Stage, Layer, Rect, Image } from "react-konva";
 
-const WIDTH = 300;
-const HEIGHT = 300;
+const WIDTH = 47 * 5;
+const HEIGHT = 46 * 5;
 
 const gridComponents = [];
 
 function App() {
-  for (var i = 0; i < 400; i += WIDTH) {
-    gridComponents.push(<Plot id={i} x={i} y={0}></Plot>);
+  for (var i = 0; i < 3; i++) {
+    var num = 13 + i;
+    gridComponents.push(<Plot id={i} x={i * WIDTH} y={0} house={num}></Plot>);
   }
 
   console.log(gridComponents);
