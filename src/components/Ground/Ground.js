@@ -8,7 +8,7 @@ function Ground(props) {
 
   const GroundImage = () => {
     const [imageUrl] = useImage(image);
-    return <Image image={imageUrl} />;
+    return <Image image={imageUrl} width={300} height={300} />;
   };
 
   return <GroundImage />;

@@ -8,7 +8,7 @@ function House(props) {
 
   const HouseImage = () => {
     const [imageUrl] = useImage(image);
-    return <Image image={imageUrl} />;
+    return <Image image={imageUrl} x={0} y={5} />;
   };
 
   return <HouseImage />;

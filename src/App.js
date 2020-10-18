@@ -1,21 +1,21 @@
 import React from "react";
 import "./App.css";
 import Plot from "./components/Plot/Plot";
+import House from "./components/House/House";
 import { render } from "react-dom";
 import { Stage, Layer, Rect, Image } from "react-konva";
 
 const WIDTH = 300;
 const HEIGHT = 300;
 
-const grid = [
-  ["red", "yellow"],
-  ["green", "blue"],
-];
-
 const gridComponents = [];
-gridComponents.push(<Plot></Plot>);
 
 function App() {
+  for (var i = 0; i < 400; i += WIDTH) {
+    gridComponents.push(<Plot id={i} x={i} y={0}></Plot>);
+  }
+
+  console.log(gridComponents);
   return (
     <div>
       <Stage
@@ -23,8 +23,6 @@ function App() {
         y={0}
         width={window.innerWidth}
         height={window.innerHeight}
-        // width={500}
-        // height={500}
         draggable
       >
         {gridComponents}
